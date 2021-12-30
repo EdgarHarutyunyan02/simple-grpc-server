@@ -1,0 +1,8 @@
+version: '3'
+services:
+  simple_grpc:
+    build:
+      context: ./
+      target: runtime
+    ports:
+      - '50051:50051'

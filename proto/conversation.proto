@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package conversation;
+
+message Request {
+    string message = 1;
+}
+
+message Response {
+    string message = 1;
+}
+
+service Conversation {
+    rpc SayHi (Request) returns (Response) {}
+    rpc Talk (Request) returns (stream Response) {}
+    rpc SayGoodbye (Request) returns (Response) {}
+}
